@@ -9,8 +9,8 @@
 <body>
 <header>
   <h1>Design: Interactive Image Compression App</h1>
-  <p>A mockup for an app that lets someone upload an image, choose a compression level k, and compare the
-     compressed result against the original.</p>
+  <p>Sketching out an app that lets someone upload an image, pick a compression level k, and see the
+     compressed result next to the original.</p>
 </header>
 
 <main>
@@ -20,33 +20,32 @@
   </figure>
 
   <section>
-    <h2>Design rationale</h2>
+    <h2>Why I laid it out this way</h2>
     <ul>
       <li>
-        <strong>Persistent left sidebar.</strong> Upload, the compression slider, and the live stats all live
-        together on the left so a user can re-adjust k repeatedly without re-uploading or losing their place.
+        <strong>Sidebar stays put.</strong> I put upload, the k slider, and the stats all in one column on the
+        left so you can keep dragging the slider around without losing your place or having to re-upload
+        anything.
       </li>
       <li>
-        <strong>Upload first, then compress.</strong> The controls are numbered top to bottom (1. upload,
-        2. choose k, 3. read the stats) to match the order someone would naturally use them in.
+        <strong>Numbered top to bottom.</strong> Upload, then pick k, then read the stats &mdash; that's the
+        order I'd actually use it in, so that's the order the controls follow.
       </li>
       <li>
-        <strong>Side-by-side comparison at equal size.</strong> The original and compressed image are shown
-        next to each other, always rendered at the same size, so differences in sharpness are easy to judge
-        without having to flip between two views.
+        <strong>Original and compressed side by side, same size.</strong> I didn't want to make people flip
+        between two views to judge quality, so both images sit next to each other at identical size.
       </li>
       <li>
-        <strong>Immediate feedback.</strong> Compression stats (dimensions, size reduction, approximation
-        error) sit directly under the slider that produced them, reinforcing the trade-off between k and
-        quality as the user drags it.
+        <strong>Stats live right under the slider.</strong> Size reduction and error update in the same spot
+        you just touched, so the trade-off between k and quality is obvious as you drag.
       </li>
       <li>
-        <strong>A demo image link</strong> next to the uploader lets someone try the app immediately, before
-        they've picked a photo of their own.
+        <strong>Demo image link.</strong> Not everyone wants to hunt for a photo first, so there's a one-click
+        way to try the app before uploading anything.
       </li>
     </ul>
     <p>
-      This design was then implemented as a real Shiny app; see the
+      I ended up building this as a real Shiny app afterward &mdash; see the
       <a href="https://github.com/MichaelLeeCodes/hw2-pca-results" target="_blank" rel="noopener">project repository</a>
       for the source and the live app link on Canvas.
     </p>
